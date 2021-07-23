@@ -12,7 +12,7 @@ import locale from 'element-ui/lib/locale'
 // 資源
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/element.less'
-import './assets/all.less'
+import './assets/style.less'
 // import {captcha} from './assets/js/captcha'
 // Vue.prototype.$EventBus = new Vue()
 Vue.config.productionTip = false

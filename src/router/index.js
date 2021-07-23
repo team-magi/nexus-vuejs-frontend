@@ -7,24 +7,25 @@ VueRouter.prototype.push = function push(location) {return originalPush.call(thi
 
 Vue.use(VueRouter)
 let router = new VueRouter({
+  mode: 'history',
   routes: [{
     path: '/',
-    name: 'index',
+    name: '',
     component: Index,
-    redirect: '/master',
-    children: [
-      // {
-      //   path: 'home',
-      //   name: 'home',
-      //   component: () => import('../views/home.vue'),
-      // },
-    ],
-  },
-    {
+    redirect: '/home',
+    children: [{
+          path: 'index',
+          name: 'index',
+          component: () => import('../views/index'),
+        }, {
+          path: 'home',
+          name: 'home',
+          component: () => import('../views/home'),
+    }],
+    }, {
       path: '*',
       redirect: '/',
-    },
-  ]
+    }]
 });
 
 router.afterEach((to, form, next) => {
