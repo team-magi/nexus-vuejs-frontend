@@ -14,7 +14,7 @@ module.exports = {
   // compiler: false,
   productionSourceMap: false,
   devServer: {
-    port: 8082,
+    port: 8080,
     disableHostCheck: true, //webpack4.0 开启热更新
   },
   pluginOptions: {

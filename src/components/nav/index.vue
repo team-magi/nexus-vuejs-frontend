@@ -2,7 +2,19 @@
   <div class="warp">
     <div class="nav-bar">
       <div class="left">
-        <i class="menu-icon el-icon-menu" @click="showLeft"></i>
+        <el-row class="block-col-2">
+          <el-col :span="12">
+            <el-dropdown>
+              <i class="menu-icon el-icon-menu" @click="showLeft"></i>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>My Auctions</el-dropdown-item>
+                <el-dropdown-item>Setting</el-dropdown-item>
+                <el-dropdown-item>Profile</el-dropdown-item>
+                <el-dropdown-item>Log Out</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </el-col>
+        </el-row>
         <img class="logo" src="" alt="Logo">
       </div>
 
@@ -74,8 +86,18 @@ export default {
                   if (error.code === 4001) {
                       // EIP-1193 userRejectedRequest error
                       console.log("Please connect to MetaMask.");
+                      this.$notify({
+                          title: 'Tips',
+                          message: error.message,
+                          duration: 0
+                      });
                   } else {
-                      console.error(error);
+
+                      this.$notify({
+                          title: 'Tips',
+                          message: 'Please connect to MetaMask.',
+                          duration: 0
+                      });
                   }
               });
       },

@@ -4,6 +4,7 @@
     <div class="_body">
       <router-view></router-view>
     </div>
+    <bottom-footer></bottom-footer>
 
     <div v-if="leftMenuStatus" class="modal-left">
       <left-menu></left-menu>
@@ -14,11 +15,13 @@
 <script>
 import {EventBus} from '../event-bus'
 import topNav from '../components/nav'
+import bottomFooter from '../components/footer'
 import leftMenu from '../components/modal'
 
 export default {
   components: {
     topNav,
+    bottomFooter,
     leftMenu
   },
   data() {
