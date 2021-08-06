@@ -34,7 +34,6 @@
 
 <script>
 import Web3 from "web3";
-import util from "@/util";
 export default {
   components: {},
   data() {
