@@ -1,8 +1,346 @@
 <template>
   <div class="wrap">
-    123123
+    // START: intentionally added by Michael Ran 
+    <div class="auctions">
+      <div class="tipsH1">Nft Marketplace</div>
+
+      <div class="art-works">
+        <div class="cm">
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/1.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions NFT1作品</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/2.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/3.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/4.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/5.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+
+            <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/1.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions NFT1作品</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/1.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions NFT1作品</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/2.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/3.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/4.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/5.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/1.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions NFT1作品</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/2.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/3.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/4.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+          <div class="art-work-card">
+            <div class="card-show">
+              <div class="box-modal"></div>
+              <div class="box">
+                <img class="md" src="../assets/images/nft/5.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="art-work-info">
+              <div class="p6">Test NFT Auctions</div>
+            </div>
+
+            <div class="art-work-info">
+              <p class="p6">@GuoGuo Mei</p>
+              <div class="price">
+                <div class="bid"><span>0.5</span> ETH</div>
+                <div class="time">21h 51m 11s</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    // END: intentionally added by Michael Ran 
+
   </div>
 </template>
+
 
 <script>
 import {EventBus} from '../event-bus'

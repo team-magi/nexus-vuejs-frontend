@@ -20,7 +20,7 @@
 
       <div class="connect">
         <ul class="menu">
-          <li>Home</li>
+          <li @click="go('home')">Home</li>
           <li @click="go('market')">Market</li>
         </ul>
         <div v-if="!isConnected" class="connect-btn" @click="getAccount">Connect Wallet</div>
