@@ -1,5 +1,5 @@
 <template>
-  <div class="warp">
+  <div class="footer">
 
       <div class="btl">
           NEXUS
@@ -61,9 +61,9 @@ export default {
 </script>
 <style lang="less" scoped>
   @import '../../assets/style.less';
-  .warp {
+  .footer {
       color: #fff;
-      height: 360px;
+      /*height: 360px;*/
       background-color: #000;
       margin-top: 170px;
 

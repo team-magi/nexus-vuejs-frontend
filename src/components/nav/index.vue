@@ -1,5 +1,5 @@
 <template>
-  <div class="warp">
+  <div class="navigation">
     <div class="nav-bar">
       <div class="left">
         <el-row class="block-col-2">
@@ -19,11 +19,10 @@
       </div>
 
       <div class="connect">
-<!--        <ul class="menu">-->
-<!--          <li>Home</li>-->
-<!--          <li>Auction</li>-->
-<!--          <li>About</li>-->
-<!--        </ul>-->
+        <ul class="menu">
+          <li>Home</li>
+          <li @click="go('market')">Market</li>
+        </ul>
         <div v-if="!isConnected" class="connect-btn" @click="getAccount">Connect Wallet</div>
         <div v-if="isConnected" class="connect-btn hover">
             {{address.substr(0, 6) + '...' + address.substr(-4)}}
@@ -102,8 +101,12 @@ export default {
               });
       },
 
-      up () {
+      go (path) {
+        let param = {
+          name: path
+        }
 
+        this.$router.push(param);
       },
 
       showLeft () {
@@ -125,7 +128,7 @@ export default {
 </script>
 <style lang="less" scoped>
   @import '../../assets/style.less';
-  .warp {
+  .navigation {
     box-shadow: 0 0 10px 10px rgba(100, 100, 100, 0.1);
     background: #fff;
   }
