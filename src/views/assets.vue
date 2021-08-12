@@ -7,7 +7,7 @@
             <div class="flex-media">
               <div class="flex-media-img">
                 <div class="mag">
-                  <img src="../assets/images/nft/hdy.jpg" alt="">
+                  <img src="../assets/images/nft/mikasa.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -157,9 +157,10 @@ export default {
           }
           .flex-media {
             cursor: pointer;
-            max-height: 1000px;
+            /*max-height: 1000px;*/
             width: 100%;
-            min-height: 500px;
+            height: 500px;
+            /*min-height: 500px;*/
 
             .flex-media-img {
               display: flex;
