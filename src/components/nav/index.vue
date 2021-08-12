@@ -25,8 +25,24 @@
         </ul>
         <div v-if="!isConnected" class="connect-btn" @click="getAccount">Connect Wallet</div>
         <div v-if="isConnected" class="connect-btn hover">
-            {{address.substr(0, 6) + '...' + address.substr(-4)}}
+          {{address.substr(0, 6) + '...' + address.substr(-4)}}
         </div>
+
+<!--        <el-row class="block-col-2">-->
+<!--          <el-col :span="12">-->
+<!--            <el-dropdown>-->
+<!--              <div v-if="isConnected" class="connect-btn hover">-->
+<!--                {{address.substr(0, 6) + '...' + address.substr(-4)}}-->
+<!--              </div>-->
+<!--              <el-dropdown-menu slot="dropdown">-->
+<!--                <el-dropdown-item>My Auctions</el-dropdown-item>-->
+<!--                <el-dropdown-item>Setting</el-dropdown-item>-->
+<!--                <el-dropdown-item>Profile</el-dropdown-item>-->
+<!--                <el-dropdown-item>Log Out</el-dropdown-item>-->
+<!--              </el-dropdown-menu>-->
+<!--            </el-dropdown>-->
+<!--          </el-col>-->
+<!--        </el-row>-->
       </div>
     </div>
   </div>

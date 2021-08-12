@@ -8,103 +8,23 @@
       <div class="tipsH1">Trending auctions</div>
       <div class="art-works">
         <div class="cm">
-          <div class="art-work-card">
+          <div class="art-work-card" v-for="(item, index) in auctions" :key="index" @click="go">
             <div class="card-show">
               <div class="box-modal"></div>
               <div class="box">
-                <img class="md" src="../assets/images/nft/1.jpg" alt="">
+                <img class="md" :src="item.src" alt="">
               </div>
             </div>
 
             <div class="art-work-info">
-              <div class="p6">Test NFT Auctions NFT1作品</div>
+              <div class="p6">{{item.title}}</div>
             </div>
 
             <div class="art-work-info">
-              <p class="p6">@GuoGuo Mei</p>
+              <p class="p6">{{item.user}}</p>
               <div class="price">
-                <div class="bid"><span>0.5</span> ETH</div>
-                <div class="time">21h 51m 11s</div>
-              </div>
-            </div>
-          </div>
-          <div class="art-work-card">
-            <div class="card-show">
-              <div class="box-modal"></div>
-              <div class="box">
-                <img class="md" src="../assets/images/nft/2.jpg" alt="">
-              </div>
-            </div>
-
-            <div class="art-work-info">
-              <div class="p6">Test NFT Auctions</div>
-            </div>
-
-            <div class="art-work-info">
-              <p class="p6">@GuoGuo Mei</p>
-              <div class="price">
-                <div class="bid"><span>0.5</span> ETH</div>
-                <div class="time">21h 51m 11s</div>
-              </div>
-            </div>
-          </div>
-          <div class="art-work-card">
-            <div class="card-show">
-              <div class="box-modal"></div>
-              <div class="box">
-                <img class="md" src="../assets/images/nft/3.jpg" alt="">
-              </div>
-            </div>
-
-            <div class="art-work-info">
-              <div class="p6">Test NFT Auctions</div>
-            </div>
-
-            <div class="art-work-info">
-              <p class="p6">@GuoGuo Mei</p>
-              <div class="price">
-                <div class="bid"><span>0.5</span> ETH</div>
-                <div class="time">21h 51m 11s</div>
-              </div>
-            </div>
-          </div>
-          <div class="art-work-card">
-            <div class="card-show">
-              <div class="box-modal"></div>
-              <div class="box">
-                <img class="md" src="../assets/images/nft/4.jpg" alt="">
-              </div>
-            </div>
-
-            <div class="art-work-info">
-              <div class="p6">Test NFT Auctions</div>
-            </div>
-
-            <div class="art-work-info">
-              <p class="p6">@GuoGuo Mei</p>
-              <div class="price">
-                <div class="bid"><span>0.5</span> ETH</div>
-                <div class="time">21h 51m 11s</div>
-              </div>
-            </div>
-          </div>
-          <div class="art-work-card">
-            <div class="card-show">
-              <div class="box-modal"></div>
-              <div class="box">
-                <img class="md" src="../assets/images/nft/5.jpg" alt="">
-              </div>
-            </div>
-
-            <div class="art-work-info">
-              <div class="p6">Test NFT Auctions</div>
-            </div>
-
-            <div class="art-work-info">
-              <p class="p6">@GuoGuo Mei</p>
-              <div class="price">
-                <div class="bid"><span>0.5</span> ETH</div>
-                <div class="time">21h 51m 11s</div>
+                <div class="bid"><span>{{item.price}}</span> ETH</div>
+                <div class="time">{{item.price}}</div>
               </div>
             </div>
           </div>
@@ -145,7 +65,53 @@ export default {
         src: require('@/assets/images/nft/5.jpg')
       }],
       auctions: [{
-        src: '@/assets/images/nft/1.jpg'
+        src: require('@/assets/images/nft/1.jpg'),
+        title: 'Test NFT Auctions',
+        user: '@GuoGuo Mei',
+        price: '0.5',
+        time: '21h 51m 11s',
+        id: '4115'
+
+      },{
+        src: require('@/assets/images/nft/1.jpg'),
+        title: 'Test NFT Auctions',
+        user: '@GuoGuo Mei',
+        price: '0.5',
+        time: '21h 51m 11s',
+        id: '4115'
+
+      },{
+        src: require('@/assets/images/nft/2.jpg'),
+        title: 'Test NFT Auctions',
+        user: '@GuoGuo Mei',
+        price: '0.5',
+        time: '21h 51m 11s',
+        id: '4115'
+
+      },{
+        src: require('@/assets/images/nft/3.jpg'),
+        title: 'Test NFT Auctions',
+        user: '@GuoGuo Mei',
+        price: '0.5',
+        time: '21h 51m 11s',
+        id: '4115'
+
+      },{
+        src: require('@/assets/images/nft/4.jpg'),
+        title: 'Test NFT Auctions',
+        user: '@GuoGuo Mei',
+        price: '0.5',
+        time: '21h 51m 11s',
+        id: '4115'
+
+      },{
+        src: require('@/assets/images/nft/5.jpg'),
+        title: 'Test NFT Auctions',
+        user: '@GuoGuo Mei',
+        price: '0.5',
+        time: '21h 51m 11s',
+        id: '4115'
+
       }],
 
       currentDate: new Date()
@@ -153,7 +119,11 @@ export default {
   },
   provide() {},
   watch: {},
-  methods: {},
+  methods: {
+    go () {
+      this.$router.push({name: 'assets'})
+    }
+  },
   created() {},
   mounted() {},
   computed: {},

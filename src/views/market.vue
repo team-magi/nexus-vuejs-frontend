@@ -1,6 +1,5 @@
 <template>
   <div class="wrap">
-    // START: intentionally added by Michael Ran 
     <div class="auctions">
       <div class="tipsH1">Nft Marketplace</div>
 
@@ -128,7 +127,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="art-work-card">
             <div class="card-show">
               <div class="box-modal"></div>
@@ -336,7 +335,6 @@
         </div>
       </div>
     </div>
-    // END: intentionally added by Michael Ran 
 
   </div>
 </template>
@@ -382,7 +380,7 @@ export default {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 24px;
+    padding: 70px 24px;
     position: relative;
     z-index: 4;
   }

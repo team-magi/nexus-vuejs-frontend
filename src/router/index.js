@@ -25,6 +25,10 @@ let router = new VueRouter({
           path: 'market',
           name: 'market',
           component: () => import('../views/market'),
+        },{
+          path: 'assets',
+          name: 'assets',
+          component: () => import('../views/assets'),
     }],
     }, {
       path: '*',

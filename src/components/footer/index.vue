@@ -1,43 +1,35 @@
 <template>
-  <div class="footer">
-
-      <div class="btl">
-          NEXUS
-      </div>
-      <div class="tf-box">
-          <div class="btl btl-inside">
-              NEXUS
-          </div>
-      </div>
-      <div class="content">
-
-          <div>
-              <p>Order</p>
-              <ul>
-                  <li>My account</li>
-                  <li>Delivery</li>
-                  <li>Return policy</li>
-              </ul>
-          </div>
-          <div>
-              <p>Help</p>
-              <ul>
-                  <li>Customer service</li>
-                  <li>Size guide</li>
-                  <li>Contact us</li>
-              </ul>
-          </div>
-          <div>
-              <p>About us</p>
-              <ul>
-                  <li>About us (Magento CMS)</li>
-                  <li>Customer service (Magento CMS)</li>
-                  <li>Store locator</li>
-                  <li>order1</li>
-              </ul>
-          </div>
-      </div>
-  </div>
+    <div class="footer-bar">
+        <div class="footer">
+            <div class="btl">
+                  NEXUS
+              </div>
+            <div class="tf-box">
+                <div class="btl btl-inside">
+                    NEXUS
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <p>Order</p>
+                    <ul><li>My account</li><li>Delivery</li><li>Return policy</li></ul>
+                </div>
+                <div>
+                    <p>Help</p>
+                    <ul><li>Customer service</li><li>Size guide</li><li>Contact us</li></ul>
+                </div>
+                <div>
+                    <p>About us</p>
+                    <ul>footer
+                        <li>About us (Magento CMS)</li>
+                        <li>Customer service (Magento CMS)</li>
+                        <li>Store locator</li>
+                        <li>order1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -61,6 +53,9 @@ export default {
 </script>
 <style lang="less" scoped>
   @import '../../assets/style.less';
+  .footer-bar {
+      background-color: #000;
+  }
   .footer {
       color: #fff;
       /*height: 360px;*/
