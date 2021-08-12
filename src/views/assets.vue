@@ -7,7 +7,7 @@
             <div class="flex-media">
               <div class="flex-media-img">
                 <div class="mag">
-                  <img src="../assets/images/nft/hdy.jpg" alt="">
+                  <img src="../assets/images/nft/mikasa.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="item">
-        <div class="item-title">环保女孩 How dare you?</div>
+        <div class="item-title">Mikasa and Misaka</div>
 
         <div class="control">
           <div class="bid">
