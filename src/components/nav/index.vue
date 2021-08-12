@@ -15,7 +15,7 @@
             </el-dropdown>
           </el-col>
         </el-row>
-        <img class="logo" src="" alt="Logo">
+        <img class="logo" src="../../assets/images/nft/nexus-logo.jpeg" alt="Logo">
       </div>
 
       <div class="connect">
