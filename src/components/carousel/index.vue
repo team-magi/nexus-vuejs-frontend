@@ -5,7 +5,7 @@
               <div class="nft_item">
                   <img :src="item.src" alt="">
               </div>
-              <div class="info">
+              <div class="info" @click="go">
                   <div class="box">
                       <div class="content">
                           Zhefuhua feichaohaokan, dajiakuaimaia!!!
@@ -35,7 +35,11 @@ export default {
           default: ''
       }
   },
-  methods: {},
+  methods: {
+      go () {
+          this.$router.push({name: 'assets'})
+      }
+  },
   created() {},
   mounted() {},
   watch: {},
