@@ -29,7 +29,11 @@ let router = new VueRouter({
           path: 'assets',
           name: 'assets',
           component: () => import('../views/assets'),
-    }],
+        },{
+          path: 'account',
+          name: 'account',
+          component: () => import('../views/account'),
+        }],
     }, {
       path: '*',
       redirect: '/',
