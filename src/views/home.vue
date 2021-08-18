@@ -144,7 +144,7 @@ export default {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 24px;
+    padding: 0 24px 170px;
     position: relative;
     z-index: 4;
   }

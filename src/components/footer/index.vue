@@ -60,7 +60,7 @@ export default {
       color: #fff;
       /*height: 360px;*/
       background-color: #000;
-      margin-top: 170px;
+      /*margin-top: 170px;*/
 
       .btl {
           /*padding: 10px 0px 10px 10px;*/
