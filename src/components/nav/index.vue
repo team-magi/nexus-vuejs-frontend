@@ -10,11 +10,12 @@
           <li @click="go('home')">Home</li>
           <li @click="go('market')">Market</li>
         </ul>
+        <div v-show="!isConnected" class="connect-btn" @click="getAccount">{{connected}}</div>
 
         <el-row class="block-col-2">
           <el-col :span="12">
             <el-dropdown>
-              <div :class="'connect-btn ' + (isConnected? 'hover': '')" @click="getAccount">{{connected}}</div>
+              <div v-show="isConnected" class="connect-btn hover" @click="getAccount">{{connected}}</div>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item>My Auctions</el-dropdown-item>
                 <el-dropdown-item>Setting</el-dropdown-item>
@@ -162,6 +163,7 @@ export default {
         transition: all .2s;
         transform: rotate(0deg);}
       .menu-icon:hover {
+        width: 100%;
         transform: rotate(-90deg);}
     }
 
