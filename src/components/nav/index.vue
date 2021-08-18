@@ -2,19 +2,6 @@
   <div class="navigation">
     <div class="nav-bar">
       <div class="left">
-        <el-row class="block-col-2">
-          <el-col :span="12">
-            <el-dropdown>
-              <i class="menu-icon el-icon-menu" @click="showLeft"></i>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>My Auctions</el-dropdown-item>
-                <el-dropdown-item>Setting</el-dropdown-item>
-                <el-dropdown-item>Profile</el-dropdown-item>
-                <el-dropdown-item>Log Out</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </el-col>
-        </el-row>
         <img class="logo" src="../../assets/images/nft/nexus-logo.jpeg" alt="Logo">
       </div>
 
@@ -23,26 +10,20 @@
           <li @click="go('home')">Home</li>
           <li @click="go('market')">Market</li>
         </ul>
-        <div v-if="!isConnected" class="connect-btn" @click="getAccount">Connect Wallet</div>
-        <div v-if="isConnected" class="connect-btn hover">
-          {{address.substr(0, 6) + '...' + address.substr(-4)}}
-        </div>
 
-<!--        <el-row class="block-col-2">-->
-<!--          <el-col :span="12">-->
-<!--            <el-dropdown>-->
-<!--              <div v-if="isConnected" class="connect-btn hover">-->
-<!--                {{address.substr(0, 6) + '...' + address.substr(-4)}}-->
-<!--              </div>-->
-<!--              <el-dropdown-menu slot="dropdown">-->
-<!--                <el-dropdown-item>My Auctions</el-dropdown-item>-->
-<!--                <el-dropdown-item>Setting</el-dropdown-item>-->
-<!--                <el-dropdown-item>Profile</el-dropdown-item>-->
-<!--                <el-dropdown-item>Log Out</el-dropdown-item>-->
-<!--              </el-dropdown-menu>-->
-<!--            </el-dropdown>-->
-<!--          </el-col>-->
-<!--        </el-row>-->
+        <el-row class="block-col-2">
+          <el-col :span="12">
+            <el-dropdown>
+              <div :class="'connect-btn ' + (isConnected? 'hover': '')" @click="getAccount">{{connected}}</div>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>My Auctions</el-dropdown-item>
+                <el-dropdown-item>Setting</el-dropdown-item>
+                <el-dropdown-item>Profile</el-dropdown-item>
+                <el-dropdown-item @click.native="logout">Log Out</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </el-col>
+        </el-row>
       </div>
     </div>
   </div>
@@ -57,6 +38,7 @@ export default {
           address: '',
           web3:  null,
           provider: null,
+          connected: 'Connect Wallet',
           isConnected: false,
 
           menu_switch: false
@@ -124,6 +106,10 @@ export default {
         this.$router.push(param);
       },
 
+      logout () {
+        window.localStorage.removeItem('n_id')
+      },
+
       showLeft () {
           this.menu_switch = !this.menu_switch``
           this.$emit('press_down', this.menu_switch)
@@ -133,7 +119,14 @@ export default {
   mounted() {
       const nid = window.localStorage.getItem('n_id')
       this.address = nid
-      nid? this.isConnected = true: this.isConnected = false
+
+      if (nid) {
+        this.isConnected = true
+        this.connected = this.address.substr(0, 6) + '...' + this.address.substr(-4)
+      } else {
+        this.isConnected = false
+        this.connected = 'Connect Wallet'
+      }
 
       this.initWeb3Account()
   },
@@ -230,7 +223,7 @@ export default {
 
     }
     @media screen and (min-width: @desktopWidth) {
-      width: @w-1080px;
+      width: @w-1360px;
       margin: 0 auto;
     }
   }

@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="item">
-        <div class="item-title">环保女孩 How dare you?</div>
+        <div class="item-title">Mikasa and Misaka</div>
 
         <div class="control">
           <div class="bid">
@@ -51,7 +51,7 @@
     <div class="block-frame">
       <div class="description">
         <div class="description-title">Description</div>
-        <div class="description-content">Greta Tintin Eleonora Ernman Thunberg (Swedish: [ˈɡrêːta ˈtʉ̂ːnbærj] (About this soundlisten); </div>
+        <div class="description-content">So you know</div>
       </div>
 
       <ul class="history">
@@ -316,5 +316,6 @@ export default {
     background: #000;
     font-size: 1.25rem;
     align-self: flex-end;
+    cursor: pointer;
   }
 </style>
