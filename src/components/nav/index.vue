@@ -225,7 +225,6 @@ export default {
 
     }
     @media screen and (min-width: @desktopWidth) {
-      width: @w-1360px;
       margin: 0 auto;
     }
   }
