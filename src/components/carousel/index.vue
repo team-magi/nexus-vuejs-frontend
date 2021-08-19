@@ -2,14 +2,10 @@
   <div class="warp">
       <el-carousel :interval="4000" type="card" height="440px">
           <el-carousel-item v-for="(item, index) in items" :key="index">
-              <div class="nft_item">
-                  <img :src="item.src" alt="">
-              </div>
-              <div class="info" @click="go">
+              <div class="nft_item"><img :src="item.src" alt=""></div>
+              <div class="info">
                   <div class="box">
-                      <div class="content">
-                          Zhefuhua feichaohaokan, dajiakuaimaia!!!
-                      </div>
+                      <div class="content" @click="go">Zhefuhuafeichaohaokandajiakuaimaia!!!</div>
                       <div class="auc">
                           <div class="usr">@CaiCai Zi</div>
                           <div class="bid">Bid <span>1251.52</span> ETH</div>
@@ -112,7 +108,7 @@ export default {
               text-align: left;
               background-color: rgba(0, 0, 0, .8);
               color: #fff;
-              font-weight: 800;
+              /*font-weight: 800;*/
               line-height: 28px;
               flex: auto;
               font-size: 20px;
@@ -144,6 +140,7 @@ export default {
           .content {
               line-height: 20px;
               padding-bottom: 16px;
+              text-decoration: underline;
           }
       }
 
