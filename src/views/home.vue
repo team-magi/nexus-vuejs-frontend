@@ -124,7 +124,23 @@ export default {
       this.$router.push({name: 'assets'})
     }
   },
-  created() {},
+  created() {
+    this.$api.getNftList({
+      page: 1,
+      pageSize: 10,
+    },{
+
+    }).then(res => {
+      console.log(res);
+    });
+    this.$api.getNftById({
+        id: 3
+    },{
+
+    }).then(res => {
+      console.log(res);
+    });
+  },
   mounted() {},
   computed: {},
 }

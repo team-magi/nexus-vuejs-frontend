@@ -10,7 +10,7 @@ let obj = {
     /** 服务器相关 */
 
     API_HOST: ENVIRONMENT == 'ONLINE' ? '' :
-        (ENVIRONMENT == 'TEST' ? '' : ''),
+        (ENVIRONMENT == 'TEST' ? 'http://localhost:3000' : ''),
 
     API_PATH: 'or',
 
