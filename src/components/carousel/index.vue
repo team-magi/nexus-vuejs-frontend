@@ -5,7 +5,8 @@
               <div class="nft_item"><img :src="item.src" alt=""></div>
               <div class="info">
                   <div class="box">
-                      <div class="content" @click="go">Zhefuhuafeichaohaokandajiakuaimaia!!!</div>
+                      <div class="content">
+                          <font @click="go">Zhefuhuafeichaohaokandajiakuaimaia!!!</font></div>
                       <div class="auc">
                           <div class="usr">@CaiCai Zi</div>
                           <div class="bid">Bid <span>1251.52</span> ETH</div>
