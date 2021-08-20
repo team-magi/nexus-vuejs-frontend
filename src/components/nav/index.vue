@@ -78,6 +78,7 @@ export default {
                   this.isConnected = true;
 
                   window.localStorage.setItem('n_id', res[0])
+                  this.initButton()
               })
               .catch((error) => {
                   if (error.code === 4001) {
@@ -107,8 +108,23 @@ export default {
         this.$router.push(param);
       },
 
+      initButton() {
+        const nid = window.localStorage.getItem('n_id')
+        this.address = nid
+
+        if (nid) {
+          this.isConnected = true
+          this.connected = this.address.substr(0, 6) + '...' + this.address.substr(-4)
+        } else {
+          this.isConnected = false
+          this.connected = 'Connect Wallet'
+        }
+      },
+
       logout () {
         window.localStorage.removeItem('n_id')
+        this.connected = 'Connect Wallet'
+        this.isConnected = false
       },
 
       showLeft () {
@@ -118,17 +134,7 @@ export default {
   },
   created() {},
   mounted() {
-      const nid = window.localStorage.getItem('n_id')
-      this.address = nid
-
-      if (nid) {
-        this.isConnected = true
-        this.connected = this.address.substr(0, 6) + '...' + this.address.substr(-4)
-      } else {
-        this.isConnected = false
-        this.connected = 'Connect Wallet'
-      }
-
+      this.initButton()
       this.initWeb3Account()
   },
   watch: {},
@@ -208,6 +214,7 @@ export default {
     }
 
     .connect-btn.hover {
+      width: 100%;
       height: 100%;
       right: 0;
       line-height: 55px;
