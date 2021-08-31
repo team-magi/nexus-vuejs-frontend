@@ -60,7 +60,7 @@ export default {
               this.provider = window.web3.currentProvider;
           } else {
               this.provider = new Web3.providers.HttpProvider(
-                  "http://127.0.0.1:7545"
+                  "http://127.0.0.1:8545"
               );
           }
 
@@ -136,6 +136,18 @@ export default {
   mounted() {
       this.initButton()
       this.initWeb3Account()
+
+      window.ethereum.on("accountsChanged", accounts => {
+        console.log(accounts);
+        if (accounts.length == 0) {
+          this.logout();
+        } else {
+          this.address = accounts[0];
+          this.isConnected = true;
+          window.localStorage.setItem('n_id', accounts[0])
+          this.initButton()
+        }
+      });
   },
   watch: {},
   computed: {},
