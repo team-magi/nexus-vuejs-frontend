@@ -46,6 +46,21 @@ export default {
       }
   },
   methods: {
+      init() {
+
+        window.ethereum.on("accountsChanged", accounts => {
+          console.log(accounts);
+          if (accounts.length == 0) {
+            this.logout();
+          } else {
+            this.address = accounts[0];
+            this.isConnected = true;
+            window.localStorage.setItem('n_id', accounts[0])
+            this.initButton()
+          }
+        });
+      },
+
       async initWeb3Account() {
           if (window.ethereum) {
               this.provider = window.ethereum;
@@ -134,20 +149,9 @@ export default {
   },
   created() {},
   mounted() {
+      this.init()
       this.initButton()
       this.initWeb3Account()
-
-      window.ethereum.on("accountsChanged", accounts => {
-        console.log(accounts);
-        if (accounts.length == 0) {
-          this.logout();
-        } else {
-          this.address = accounts[0];
-          this.isConnected = true;
-          window.localStorage.setItem('n_id', accounts[0])
-          this.initButton()
-        }
-      });
   },
   watch: {},
   computed: {},
