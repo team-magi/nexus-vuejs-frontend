@@ -2,15 +2,15 @@
   <div class="warp">
       <el-carousel :interval="4000" type="card" height="440px">
           <el-carousel-item v-for="(item, index) in items" :key="index">
-              <div class="nft_item"><img :src="item.src" alt=""></div>
+              <div class="nft_item"><img :src="item.img_url" alt=""></div>
               <div class="info">
                   <div class="box">
                       <div class="content">
-                          <font @click="go">Zhefuhuafeichaohaokandajiakuaimaia!!!</font></div>
+                          <font @click="go(item)">{{item.title}}</font></div>
                       <div class="auc">
-                          <div class="usr">@CaiCai Zi</div>
-                          <div class="bid">Bid <span>1251.52</span> ETH</div>
-                          <div class="time">21h 18m 16s</div>
+                          <div class="usr">@{{item.user}}</div>
+                          <div class="bid">Bid <span>{{item.price}}</span> ETH</div>
+                          <div class="time">{{item.time}}</div>
                       </div>
                   </div>
               </div>
@@ -33,8 +33,10 @@ export default {
       }
   },
   methods: {
-      go () {
-          this.$router.push({name: 'assets'})
+      go (item) {
+          this.$router.push({name: 'assets', params: {
+                  param: item
+              }})
       }
   },
   created() {},
