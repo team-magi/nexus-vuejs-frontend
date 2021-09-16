@@ -17,14 +17,17 @@
             </div>
 
             <div class="art-work-info">
-              <div class="p6">{{item.name}}</div>
+              <div class="p6">{{item.title}}</div>
+<!--              <div class="p6">{{item.name}}</div>-->
             </div>
 
             <div class="art-work-info">
               <p class="p6">@{{item.user}}</p>
               <div class="price">
-                <div class="bid"><span>{{item.current_price}}</span> ETH</div>
-                <div class="time">{{item.created_at}}</div>
+<!--                <div class="bid"><span>{{item.current_price}}</span> ETH</div>-->
+                <!--                <div class="time">{{item.created_at}}</div>-->
+                <div class="bid"><span>{{item.price}}</span> ETH</div>
+                <div class="time">{{item.time}}</div>
               </div>
             </div>
           </div>
@@ -54,35 +57,35 @@ export default {
         {
           title: 'NFT1作品',
           img_url: require('@/assets/images/nft/0b1f0fa6g00quoaro046wd200k000b9g00it00ak.gif'),
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
         }, {
           title: 'NFT1作品',
           img_url: require('@/assets/images/nft/0bac5b3dg00quoay6042yd200k000b9g00it00ak.gif'),
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
         }, {
           title: 'NFT1作品',
           img_url: require('@/assets/images/nft/0be7ce7dg00quoase04hrd200k000b9g00it00ak.gif'),
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
         }, {
           title: 'NFT1作品',
           img_url: require('@/assets/images/nft/4.jpg'),
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
         }, {
           title: 'NFT1作品',
           img_url: require('@/assets/images/nft/5.jpg'),
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
@@ -92,7 +95,7 @@ export default {
         {
           src: require('@/assets/images/nft/1.jpg'),
           title: 'Test NFT Auctions',
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           id: '4115',
@@ -101,7 +104,7 @@ export default {
         },{
           img_url: require('@/assets/images/nft/0b1f0fa6g00quoaro046wd200k000b9g00it00ak.gif'),
           title: 'Test NFT Auctions',
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           id: '4115',
@@ -110,7 +113,7 @@ export default {
         },{
           img_url: require('@/assets/images/nft/0bac5b3dg00quoay6042yd200k000b9g00it00ak.gif'),
           title: 'Test NFT Auctions',
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           id: '4115',
@@ -119,7 +122,7 @@ export default {
         },{
           img_url: require('@/assets/images/nft/0be7ce7dg00quoase04hrd200k000b9g00it00ak.gif'),
           title: 'Test NFT Auctions',
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           id: '4115',
@@ -128,7 +131,7 @@ export default {
         },{
           img_url: require('@/assets/images/nft/4.jpg'),
           title: 'Test NFT Auctions',
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           id: '4115',
@@ -137,7 +140,7 @@ export default {
         },{
           img_url: require('@/assets/images/nft/5.jpg'),
           title: 'Test NFT Auctions',
-          user: '@GuoGuo Mei',
+          user: 'GuoGuo Mei',
           price: '0.5',
           time: '21h 51m 11s',
           id: '4115',

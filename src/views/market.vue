@@ -45,7 +45,7 @@ export default {
       auctions: [{
         src: require('@/assets/images/nft/1.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -53,7 +53,7 @@ export default {
       },{
         src: require('@/assets/images/nft/1.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -61,7 +61,7 @@ export default {
       },{
         src: require('@/assets/images/nft/2.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -69,7 +69,7 @@ export default {
       },{
         src: require('@/assets/images/nft/3.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -77,7 +77,7 @@ export default {
       },{
         src: require('@/assets/images/nft/4.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -85,7 +85,7 @@ export default {
       },{
         src: require('@/assets/images/nft/5.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -93,7 +93,7 @@ export default {
       },{
         src: require('@/assets/images/nft/1.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -101,7 +101,7 @@ export default {
       },{
         src: require('@/assets/images/nft/2.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -109,7 +109,7 @@ export default {
       },{
         src: require('@/assets/images/nft/3.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -117,7 +117,7 @@ export default {
       },{
         src: require('@/assets/images/nft/4.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
@@ -125,7 +125,7 @@ export default {
       },{
         src: require('@/assets/images/nft/5.jpg'),
         title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
+        user: 'GuoGuo Mei',
         price: '0.5',
         time: '21h 51m 11s',
         id: '4115'
