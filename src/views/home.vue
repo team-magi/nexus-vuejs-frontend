@@ -1,30 +1,30 @@
 <template>
   <div class="wrap">
     <div class="carousel">
-      <carousel :items="nftList"></carousel>
+      <carousel :items="hotList"></carousel>
     </div>
 
     <div class="auctions">
       <div class="tipsH1">Trending auctions</div>
       <div class="art-works">
         <div class="cm">
-          <div class="art-work-card" v-for="(item, index) in auctions" :key="index" @click="go">
+          <div class="art-work-card" v-for="(item, index) in auctions" :key="index" @click="go(item)">
             <div class="card-show">
               <div class="box-modal"></div>
               <div class="box">
-                <img class="md" :src="item.src" alt="">
+                <img class="md" :src="item.img_url" alt="">
               </div>
             </div>
 
             <div class="art-work-info">
-              <div class="p6">{{item.title}}</div>
+              <div class="p6">{{item.name}}</div>
             </div>
 
             <div class="art-work-info">
-              <p class="p6">{{item.user}}</p>
+              <p class="p6">@{{item.user}}</p>
               <div class="price">
-                <div class="bid"><span>{{item.price}}</span> ETH</div>
-                <div class="time">{{item.price}}</div>
+                <div class="bid"><span>{{item.current_price}}</span> ETH</div>
+                <div class="time">{{item.created_at}}</div>
               </div>
             </div>
           </div>
@@ -33,12 +33,14 @@
     </div>
 
 
+<!--    <img src="../assets/images/nft/0be7ce7dg00quoase04hrd200k000b9g00it00ak.gif.gif" alt="">-->
   </div>
 </template>
 
 <script>
 import {EventBus} from '../event-bus'
 import carousel from '../components/carousel'
+import common from '@/common'
 
 
 export default {
@@ -48,71 +50,103 @@ export default {
   data() {
     return {
       eventBus: EventBus,
-      nftList: [{
-        title: 'NFT1作品',
-        src: require('@/assets/images/nft/1.jpg')
-      }, {
-        title: 'NFT1作品',
-        src: require('@/assets/images/nft/2.jpg')
-      }, {
-        title: 'NFT1作品',
-        src: require('@/assets/images/nft/3.jpg')
-      }, {
-        title: 'NFT1作品',
-        src: require('@/assets/images/nft/4.jpg')
-      }, {
-        title: 'NFT1作品',
-        src: require('@/assets/images/nft/5.jpg')
-      }],
-      auctions: [{
-        src: require('@/assets/images/nft/1.jpg'),
-        title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
-        price: '0.5',
-        time: '21h 51m 11s',
-        id: '4115'
+      hotList: [
+        {
+          title: 'NFT1作品',
+          img_url: require('@/assets/images/nft/0b1f0fa6g00quoaro046wd200k000b9g00it00ak.gif'),
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
+        }, {
+          title: 'NFT1作品',
+          img_url: require('@/assets/images/nft/0bac5b3dg00quoay6042yd200k000b9g00it00ak.gif'),
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
+        }, {
+          title: 'NFT1作品',
+          img_url: require('@/assets/images/nft/0be7ce7dg00quoase04hrd200k000b9g00it00ak.gif'),
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
+        }, {
+          title: 'NFT1作品',
+          img_url: require('@/assets/images/nft/4.jpg'),
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
+        }, {
+          title: 'NFT1作品',
+          img_url: require('@/assets/images/nft/5.jpg'),
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
+        }
+      ],
+      auctions: [
+        {
+          src: require('@/assets/images/nft/1.jpg'),
+          title: 'Test NFT Auctions',
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          id: '4115',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
 
-      },{
-        src: require('@/assets/images/nft/1.jpg'),
-        title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
-        price: '0.5',
-        time: '21h 51m 11s',
-        id: '4115'
+        },{
+          img_url: require('@/assets/images/nft/0b1f0fa6g00quoaro046wd200k000b9g00it00ak.gif'),
+          title: 'Test NFT Auctions',
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          id: '4115',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
 
-      },{
-        src: require('@/assets/images/nft/2.jpg'),
-        title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
-        price: '0.5',
-        time: '21h 51m 11s',
-        id: '4115'
+        },{
+          img_url: require('@/assets/images/nft/0bac5b3dg00quoay6042yd200k000b9g00it00ak.gif'),
+          title: 'Test NFT Auctions',
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          id: '4115',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
 
-      },{
-        src: require('@/assets/images/nft/3.jpg'),
-        title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
-        price: '0.5',
-        time: '21h 51m 11s',
-        id: '4115'
+        },{
+          img_url: require('@/assets/images/nft/0be7ce7dg00quoase04hrd200k000b9g00it00ak.gif'),
+          title: 'Test NFT Auctions',
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          id: '4115',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
 
-      },{
-        src: require('@/assets/images/nft/4.jpg'),
-        title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
-        price: '0.5',
-        time: '21h 51m 11s',
-        id: '4115'
+        },{
+          img_url: require('@/assets/images/nft/4.jpg'),
+          title: 'Test NFT Auctions',
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          id: '4115',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
 
-      },{
-        src: require('@/assets/images/nft/5.jpg'),
-        title: 'Test NFT Auctions',
-        user: '@GuoGuo Mei',
-        price: '0.5',
-        time: '21h 51m 11s',
-        id: '4115'
+        },{
+          img_url: require('@/assets/images/nft/5.jpg'),
+          title: 'Test NFT Auctions',
+          user: '@GuoGuo Mei',
+          price: '0.5',
+          time: '21h 51m 11s',
+          id: '4115',
+          link: 'https://opensea.io/assets/0x922a6ac0f4438bf84b816987a6bbfee82aa02073/4001'
 
-      }],
+        }
+      ],
+      page: 1,
+      size: 10,
 
       currentDate: new Date()
     }
@@ -120,26 +154,73 @@ export default {
   provide() {},
   watch: {},
   methods: {
-    go () {
-      this.$router.push({name: 'assets'})
+    go (item) {
+      this.$router.push({name: 'assets', params: {
+        param: item
+      }})
+    },
+
+    getCarouselList() {
+
+      this.$api.getNftList({type: 1}).then(res => {
+
+        res.data.map(dt => {
+
+          dt.img_url = common.IMG_HOST + dt.url
+          dt.created_at = this.fmtTime(dt.created_at)
+        })
+
+        // this.hotList = res.data
+      })
+    },
+
+    getHotMarketList(page, size) {
+
+      this.$api.getNftList({page: page, pageSize: size, type: 2}).then(res => {
+
+        console.log(res)
+        res.data.map(dt => {
+
+          dt.img_url = common.IMG_HOST + dt.url
+          dt.created_at = this.fmtTime(dt.created_at)
+        })
+
+        // this.auctions = res.data
+      })
+    },
+
+    returnDateAT(t) {
+      let time = new Date(t)
+
+      return new Date(time.replace(/-/g, '/').replace('T', ' ')).toISOString()
+    },
+
+    fmtTime (time) {
+      let date = new Date(time);
+
+      let chinaDate = date.toDateString();
+      let globalDate = date.toUTCString();
+      let chinaDateArray = chinaDate.split(' ');
+      let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`;
+      console.log(displayDate)
     }
   },
   created() {
-    this.$api.getNftList({
-      page: 1,
-      pageSize: 10,
-    },{
+    this.getHotMarketList(this.page, this.size)
+    this.getCarouselList()
 
-    }).then(res => {
-      console.log(res);
-    });
-    this.$api.getNftById({
-        id: 3
-    },{
+    // this.$api.getNftList(JSON.stringify({
+    //   page: 1,
+    //   pageSize: 10,
+    // })).then(res => {
+    //   console.log(res);
+    // });
 
-    }).then(res => {
-      console.log(res);
-    });
+    // this.$api.getNftById({
+    //     id: 3
+    // }).then(res => {
+    //   console.log(res);
+    // });
   },
   mounted() {},
   computed: {},

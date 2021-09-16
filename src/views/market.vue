@@ -5,7 +5,7 @@
 
       <div class="art-works">
         <div class="cm">
-          <div class="art-work-card" v-for="(item, index) in auctions" :key="index" @click="go">
+          <div class="art-work-card" v-for="(item, index) in auctions" :key="index" @click="go(item)">
             <div class="card-show">
               <div class="box-modal"></div>
               <div class="box">
@@ -138,8 +138,10 @@ export default {
   provide() {},
   watch: {},
   methods: {
-    go () {
-      this.$router.push({name: 'assets'})
+    go (item) {
+      this.$router.push({name: 'assets', params: {
+          param: item
+        }})
     }
   },
   created() {},
@@ -355,8 +357,7 @@ export default {
   }
 
   .tipsH1 {
-    padding-top: 18px;
-    padding-bottom: 50px;
+    padding: 10px 0 50px;
     font-size: 32px;
     color: #323232;
   }

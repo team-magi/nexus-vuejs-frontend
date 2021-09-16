@@ -7,7 +7,7 @@
             <div class="flex-media">
               <div class="flex-media-img">
                 <div class="mag">
-                  <img src="../assets/images/nft/mikasa.jpg" alt="">
+                  <img :src="auction.img_url" alt="">
                 </div>
               </div>
             </div>
@@ -15,13 +15,13 @@
         </div>
       </div>
       <div class="item">
-        <div class="item-title">Mikasa and Misaka</div>
+        <div class="item-title">{{auction.title}}</div>
 
         <div class="control">
           <div class="bid">
             <div class="current">
               <div class="title">Current Bid</div>
-              <div class="font34">2.17</div>
+              <div class="font34">{{auction.price}}</div>
               <div class="font24" style="font-size: 16px">ETH</div>
             </div>
 
@@ -43,7 +43,7 @@
               </div>
             </div>
           </div>
-          <div class="btn-bid">Bid</div>
+          <div class="btn-bid" @click="bid">Bid</div>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
 
       <ul class="history">
         <li>View on Etherscan</li>
-        <li>View on IPFS</li>
+        <li>View on IPFS<span>D0X251FD1HF812HF1JA-0JF-1HF1HS</span></li>
         <li>View IPFS Metadata</li>
       </ul>
     </div>
@@ -73,18 +73,30 @@ export default {
   data() {
     return {
       eventBus: EventBus,
-      auctions: {
+      auction: {
         title: 'NFT1作品',
-        src: require('@/assets/images/nft/1.jpg')
+        src: require('@/assets/images/nft/0b1f0fa6g00quoaro046wd200k000b9g00it00ak.gif')
       },
 
-      currentDate: new Date()
+      currentDate: new Date(),
     }
   },
   provide() {},
   watch: {},
-  methods: {},
-  created() {},
+  methods: {
+    bid () {
+      window.open(this.auction.link, '_blank')
+    }
+  },
+  created() {
+    let _obj = this.$route.params.param
+    //
+    // console.log(_obj)
+    // _obj.img_url = require('@/' + _obj.img_url)
+    this.auction = _obj
+
+
+  },
   mounted() {},
   computed: {},
 }
@@ -123,6 +135,13 @@ export default {
     div {
       flex: 1;
       text-align: left;
+    }
+
+    .bid div {
+
+      @media screen and (max-width: 54em) {
+        flex: none;
+      }
     }
 
     .itemMedia {
@@ -264,9 +283,14 @@ export default {
   .block-frame {
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
 
     @media screen and (max-width: 54em) {
       flex-direction: column;
+    }
+
+    @media screen and (min-width: 85em) {
+      width: 1360px;
     }
 
     .description {
@@ -303,6 +327,11 @@ export default {
         text-align: left;
         transition: all .2s;
         cursor: pointer;
+
+        span {
+          color: #999;
+          float: right;
+        }
       }
     }
   }
