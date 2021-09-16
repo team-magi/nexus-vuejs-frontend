@@ -2,7 +2,7 @@
   <div class="navigation">
     <div class="nav-bar">
       <div class="left">
-        <img class="logo" src="../../assets/images/nft/nexus-logo.jpeg" alt="Logo">
+        <img @click="go('home')" class="logo" src="../../assets/images/nft/nexus-logo.jpeg" alt="Logo">
       </div>
 
       <div class="connect">
