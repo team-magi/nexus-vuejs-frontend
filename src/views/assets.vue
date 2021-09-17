@@ -75,7 +75,7 @@ export default {
       eventBus: EventBus,
       auction: {
         title: 'NFT1作品',
-        src: require('@/assets/images/nft/0b1f0fa6g00quoaro046wd200k000b9g00it00ak.gif')
+        src: require('@/assets/images/nft/1.jpg')
       },
 
       currentDate: new Date(),
